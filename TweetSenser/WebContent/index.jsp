@@ -30,7 +30,7 @@
 	<form action="SenserServlet" method="get">
 		Search terms:
 		<br/>
-		<input type="text" name="terms" size="150px" value="Lady Gaga"/>
+		<input type="text" name="terms" size="150px" value=""/>
 		<br/>
 		from <input type="date" name="dateFrom" id="datePickerFrom" value=<%=model.getDateFrom() %> />&ensp;
 <%-- 		to <input type="date" name="dateTo" id="datePickerTo" value=<%=model.getDateTo()%> />&ensp; --%>
