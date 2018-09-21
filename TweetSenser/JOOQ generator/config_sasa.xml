@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.6.0.xsd">
+	<!-- Configure the database connection here -->
+	<jdbc>
+		<driver>com.mysql.jdbc.Driver</driver>
+		<url>jdbc:mysql://kostic-sasa.no-ip.org/tweetsenser</url>
+		<user>tweet</user>
+		<password>senser</password>
+	</jdbc>
+
+	<generator>
+		<!-- The default code generator. You can override this one, to generate 
+			your own code style. Supported generators: - org.jooq.util.JavaGenerator 
+			- org.jooq.util.ScalaGenerator Defaults to org.jooq.util.JavaGenerator -->
+		<name>org.jooq.util.JavaGenerator</name>
+
+		<database>
+			<!-- The database type. The format here is: org.util.[database].[database]Database -->
+			<name>org.jooq.util.mysql.MySQLDatabase</name>
+
+			<!-- The database schema (or in the absence of schema support, in your 
+				RDBMS this can be the owner, user, database name) to be generated -->
+			<inputSchema>tweetsenser</inputSchema>
+
+			<!-- All elements that are generated from your schema (A Java regular 
+				expression. Use the pipe to separate several expressions) Watch out for case-sensitivity. 
+				Depending on your database, this might be important! -->
+			<includes>.*</includes>
+
+			<!-- All elements that are excluded from your schema (A Java regular expression. 
+				Use the pipe to separate several expressions). Excludes match before includes -->
+			<excludes></excludes>
+		</database>
+
+		<generate>
+			<!-- Generate POJOs in addition to Record classes for usage of the ResultQuery.fetchInto(Class) 
+				API Defaults to false -->
+			<pojos>true</pojos>
+
+			<!-- Generate immutable POJOs for usage of the ResultQuery.fetchInto(Class) 
+				API This overrides any value set in <pojos/> Defaults to false -->
+			<immutablePojos>false</immutablePojos>
+		</generate>
+
+		<target>
+			<!-- The destination package of your generated classes (within the destination 
+				directory) -->
+			<packageName>db</packageName>
+
+			<!-- The destination directory of your generated classes -->
+			<directory>D:/Eclipse/PhotonEE/elfak/TweetSenser/src/main/java/</directory>
+		</target>
+	</generator>
+</configuration>
